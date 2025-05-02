@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="200" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Face -->
+  <path d="M100 100C100 50 300 50 300 100C300 200 100 200 100 100Z" fill="#90EE90"/>
+  
+  <!-- Eyes -->
+  <ellipse cx="160" cy="120" rx="30" ry="40" fill="black"/>
+  <ellipse cx="240" cy="120" rx="30" ry="40" fill="black"/>
+  
+  <!-- Nostrils -->
+  <circle cx="180" cy="160" r="10" fill="#006400"/>
+  <circle cx="220" cy="160" r="10" fill="#006400"/>
+</svg> 
