@@ -12,28 +12,31 @@
     align-items: center;
     justify-content: flex-start;
     padding: 2rem 1rem;
-    background-color: #e8f5e9;
+    background-color: #E6FFE9;
     background-image: 
-      radial-gradient(circle at 10% 20%, rgba(214, 186, 29, 0.2) 10%, transparent 20%),
+      radial-gradient(circle at 10% 20%, rgba(144, 238, 144, 0.2) 10%, transparent 20%),
       radial-gradient(circle at 80% 30%, rgba(144, 238, 144, 0.2) 15%, transparent 25%),
-      radial-gradient(circle at 40% 70%, rgba(20, 69, 20, 0.2) 20%, transparent 30%),
-      linear-gradient(135deg, rgba(144, 238, 144, 0.1) 0%, transparent 100%);
+      radial-gradient(circle at 40% 70%, rgba(144, 238, 144, 0.2) 20%, transparent 30%),
+      linear-gradient(135deg, rgba(144, 238, 144, 0.1) 0%, transparent 100%),
+      url('./images/dinoback.png');
+    background-position: 
+      0 0,
+      0 0,
+      0 0,
+      0 0,
+      center bottom;
+    background-repeat: no-repeat;
+    background-size: 
+      100%,
+      100%,
+      100%,
+      100%,
+      ;
     position: relative;
     overflow: hidden;
   }
   
-  .main::after {
-    content: '';
-    position: absolute;
-    bottom: -120px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 240px;
-    height: 240px;
-    background-color: #ffffff;
-    border-radius: 50% 50% 0 0;
-    z-index: 1;
-  }
+
   
   .main::before {
     content: '';
