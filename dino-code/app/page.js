@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import Navbar from './components/Navbar';
 import styles from './page.module.css';
+import DinoBackground from './components/DinoBackground';
 
 export default function HomePage() {
   return (
