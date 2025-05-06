@@ -1,0 +1,10 @@
+.selection_box {
+    padding: 8px;
+    color: black;
+    background-color: white;
+    width: 352px;
+}
+
+.selection_box:hover {
+    background-color: grey;
+}

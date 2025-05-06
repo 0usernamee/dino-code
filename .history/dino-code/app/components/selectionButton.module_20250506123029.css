@@ -1,0 +1,9 @@
+.selection_box {
+    padding: 8px;
+    color: black;
+    background-color: white;
+}
+
+.selection_box:hover {
+    background-color: grey;
+}
