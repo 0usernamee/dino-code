@@ -1,6 +1,7 @@
 .button {
     display: flex;
     align-items: center;
+    padding: 0.8rem 1rem;
     padding: 0.75rem 1rem;
     border-radius: 8px;
     font-size: 1rem;
@@ -9,6 +10,8 @@
     text-decoration: none;
     transition: opacity 0.2s ease;
     position: relative;
+    width: 313px;
+    height: 51px;
 }
 
 .button:hover {

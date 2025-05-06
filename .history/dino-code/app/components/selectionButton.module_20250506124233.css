@@ -1,0 +1,14 @@
+.selection_box {
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    width: 352px;
+    height: 72px;
+    background-color: white;
+    color: #9d9d9d;
+}
+
+.selection_box:hover {
+    background-color: grey;
+}

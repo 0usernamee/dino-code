@@ -8,7 +8,9 @@
     width: 100%;
     text-decoration: none;
     transition: opacity 0.2s ease;
-    position: relative;
+    position: center;
+    width: 313px;
+    height: 51px;
 }
 
 .button:hover {

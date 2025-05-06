@@ -67,6 +67,7 @@
     max-width: 420px;
     z-index: 10;
     position: relative;
+    align-items: center;
 }
 
 .input {
@@ -77,6 +78,7 @@
     width: 100%;
     background-color: white;
     color: #9d9d9d;
+    align-items: center;
 }
 
 .signupButton {
