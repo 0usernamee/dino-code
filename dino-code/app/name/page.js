@@ -14,7 +14,7 @@ export default function NamePage() {
     console.log('First name submitted:', firstName);
     
     localStorage.setItem('userFirstName', firstName);
-    window.location.href = '/'; // Redirect to homepage or next page
+    window.location.href = '/age'; // Redirect to homepage or next page
   };
 
   return (
