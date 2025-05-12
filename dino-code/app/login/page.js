@@ -23,23 +23,24 @@ export default function LoginPage() {
             placeholder="Password"
             className={styles.input}
           />
-          
-          <button type="submit" className={styles.loginButton}>
-            Login!
-          </button>
+
+<button 
+  type="button" 
+  className={styles.loginButton} 
+  onClick={() => window.location.href = '/name'}
+>
+  Login!
+</button>
         </form>
-        
         <div className={styles.socialButtons}>
           <SocialButton 
             provider="meta" 
             text="Continue with Meta" 
           />
-          
           <SocialButton 
             provider="google" 
             text="Continue with Google" 
           />
-          
           <SocialButton 
             provider="apple" 
             text="Continue with Apple" 

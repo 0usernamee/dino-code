@@ -36,9 +36,13 @@ export default function SignupPage() {
             className={styles.input}
           />
           
-          <button type="submit" className={styles.signupButton}>
-            Register!
-          </button>
+          <button 
+  type="button" 
+  className={styles.loginButton} 
+  onClick={() => window.location.href = '/name'}
+>
+  Login!
+</button>
         </form>
         
         <div className={styles.socialButtons}>
