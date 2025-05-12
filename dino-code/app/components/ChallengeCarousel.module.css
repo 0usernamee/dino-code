@@ -1,0 +1,161 @@
+.carouselContainer {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  position: relative;
+  touch-action: pan-y; /* Enable vertical scrolling but disable horizontal to prevent conflicts */
+}
+
+.carouselWrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  user-select: none; /* Prevent text selection during swipe */
+}
+
+.carouselTrack {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+.carouselSlide {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.card {
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.cardHeader {
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align content to the left */
+  width: 100%; /* Full width of the card */
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.flameIcon {
+  background-color: white;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.streakBadge {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.cardTitle {
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  margin-left: 4px;
+}
+
+.scoreDisplay {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: auto; /* Push to the right */
+}
+
+.cardBody {
+  padding: 16px;
+}
+
+.calendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  margin-bottom: 24px;
+}
+
+.calendarDay {
+  text-align: center;
+}
+
+.dayLabel {
+  color: #6e7b7d;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.dayNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1b201c;
+}
+
+.activeDay {
+  color: white;
+}
+
+.actionButtonContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.actionButton {
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Floating indicators that don't move with the cards */
+.floatingIndicators {
+  position: absolute;
+  bottom: 16px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  z-index: 10;
+}
+
+.indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(208, 208, 208, 0.8);
+  transition: all 0.2s;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.activeIndicator {
+  background-color: #000;
+}
