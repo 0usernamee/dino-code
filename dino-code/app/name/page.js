@@ -13,8 +13,6 @@ export default function NamePage() {
     // Handle the first name - you can add your logic here
     console.log('First name submitted:', firstName);
     
-    // Since we can't use router, you would need to handle navigation another way
-    // For example, you could use window.location or store in localStorage and redirect
     localStorage.setItem('userFirstName', firstName);
     window.location.href = '/'; // Redirect to homepage or next page
   };
@@ -26,22 +24,25 @@ export default function NamePage() {
       <div className={styles.content}>
         <h1 className={styles.title}>Whats your First name?</h1>
         
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="firstName"
-            placeholder="Your first name..."
-            className={styles.inputField}
-            required
-          />
-          
-          <button
-            type="submit"
-            className={styles.submitButton}
-          >
-            Continue
-          </button>
-        </form>
+        <div className={styles.formWrapper}>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              name="firstName"
+              placeholder="Your first name..."
+              className={styles.inputField}
+              required
+              autoComplete="off"
+            />
+            
+            <button
+              type="submit"
+              className={styles.submitButton}
+            >
+              Continue
+            </button>
+          </form>
+        </div>
       </div>
     </main>
   );
