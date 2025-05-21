@@ -34,7 +34,7 @@ export default function ChallengeCarousel() {
         streak: 15,
         activeDays: [11, 12], // may be updated with real dates
         buttonText: "See Results",
-        color: "#005c0b",
+        color: "#000000",
         textColor: "#000000",
       },
       {
