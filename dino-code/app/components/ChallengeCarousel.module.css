@@ -54,8 +54,8 @@
 .flameIcon {
   background-color: white;
   border-radius: 50%;
-  width: 32px;
-  height: 32px;
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -63,9 +63,17 @@
 }
 
 .streakBadge {
+  background-color: #000;
   color: white;
   font-size: 14px;
   font-weight: 500;
+  border-radius: 100%;
+  padding: 4px;
+  width: 29px;
+  text-align: center;
+  z-index: 2;
+  margin-left: -15px;
+  margin-top: 15px;
 }
 
 .cardTitle {
