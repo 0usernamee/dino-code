@@ -35,11 +35,14 @@
 }
 
 .cardHeader {
-  padding: 12px 16px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; /* Align content to the left */
-  width: 100%; /* Full width of the card */
+    justify-content: flex-start;
+    align-items: center;
+    height: 71px;
+    margin: 12px 12px;
+    padding: 12px 16px;
+    display: flex
+;
+    border-radius: 13px;
 }
 
 .headerContent {
