@@ -32,10 +32,10 @@ export default function ChallengeCarousel() {
         type: "daily",
         score: null,
         streak: 15,
-        activeDays: [11, 12], // Will be updated with real dates
+        activeDays: [11, 12], // may be updated with real dates
         buttonText: "See Results",
         color: "#005c0b",
-        textColor: "#005c0b",
+        textColor: "#000000",
       },
       {
         id: 2,
@@ -43,10 +43,10 @@ export default function ChallengeCarousel() {
         type: "css",
         score: { current: 0, total: 10 },
         streak: null,
-        activeDays: [], // Will be updated with real dates
+        activeDays: [], // may be updated with real dates
         buttonText: "Start Streak",
         color: "#5b64c2",
-        textColor: "#5b64c2",
+        textColor: "#000000",
       },
       {
         id: 3,
@@ -54,10 +54,10 @@ export default function ChallengeCarousel() {
         type: "javascript",
         score: { current: 2, total: 10 },
         streak: 2,
-        activeDays: [], // Will be updated with real dates
+        activeDays: [], // may be updated with real dates
         buttonText: "Continue Streak",
         color: "#fb7e6e",
-        textColor: "#fb7e6e",
+        textColor: "#000000",
       },
       {
         id: 4,
@@ -65,15 +65,15 @@ export default function ChallengeCarousel() {
         type: "html",
         score: { current: 0, total: 10 },
         streak: null,
-        activeDays: [], // Will be updated with real dates
+        activeDays: [], // may be updated with real dates
         buttonText: "Start Streak",
         color: "#8f338e",
-        textColor: "#8f338e",
+        textColor: "#000000",
       },
     ],
   });
 
-  // Touch tracking refs
+  // mouse tracking refs
   const touchStartX = useRef(null);
   const touchEndX = useRef(null);
   const dragStartX = useRef(null);
@@ -82,7 +82,7 @@ export default function ChallengeCarousel() {
 
   const days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
 
-  // Calculate current week dates
+  // calculate current week dates
   useEffect(() => {
     const now = new Date();
     const currentDay = now.getDate();
