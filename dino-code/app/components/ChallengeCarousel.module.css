@@ -4,7 +4,9 @@
   margin: 0 auto;
   position: relative;
   touch-action: pan-y; /* Enable vertical scrolling but disable horizontal to prevent conflicts */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft drop shadow */
 }
+
 
 .carouselWrapper {
   position: relative;
@@ -158,4 +160,18 @@
 
 .activeIndicator {
   background-color: #000;
+}
+.actionButton:hover,
+.actionButton:focus {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.indicator:focus {
+  outline: 2px solid #0070f3;
+}
+.todayCircle {
+  border: 2px solid #000; /* or your theme color */
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* optional glow */
 }
