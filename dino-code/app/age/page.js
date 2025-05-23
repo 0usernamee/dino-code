@@ -1,13 +1,9 @@
 import SelectionButton from "../components/selectionButton";
 import styles from "@/app/age/page.module.css";
-// import { useRouter } from "next/router";
+import Navbar from "../components/Navbar"
 
 export default function Age() {
-    // const router = useRouter();
 
-    // const handleSelection = (selection) => {
-    //     router.push(`/age`);
-    // };
 
     return (
         <>
