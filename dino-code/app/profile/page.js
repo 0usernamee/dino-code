@@ -28,7 +28,7 @@ export default function ProfilePage() {
             </h5>
           </div>
         </div>
-        <div style={{ marginTop: '2.5rem', marginBottom: '1.2rem', textAlign: 'center', fontWeight: 700, fontSize: '1.2rem', color: '#222' }}>
+        <div style={{ marginTop: '2.5rem', marginBottom: '1.2rem', textAlign: 'center', fontWeight: 700, fontSize: '1.5rem', color: '#222' }}>
           Current Streak
         </div>
         <ChallengeCarousel />
