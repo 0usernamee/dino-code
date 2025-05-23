@@ -1,0 +1,310 @@
+/* Overlay Background */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Modal Container */
+.modal {
+  background: #2a2a2a;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 900px;
+  height: 90vh;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Header */
+.header {
+  background: #3a3a3a;
+  color: white;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #4a4a4a;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+  color: white;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: #ccc;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.closeButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+/* Page Indicator */
+.pageIndicator {
+  background: #3a3a3a;
+  color: #ccc;
+  text-align: center;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #4a4a4a;
+}
+
+/* Carousel Content Area */
+.carouselContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: #2a2a2a;
+  overflow: visible;
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  position: absolute;
+  border-radius: 16px;
+  transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.cardImage {
+  object-fit: contain;
+  border-radius: 16px;
+  background: white;
+}
+
+.activeCard {
+  z-index: 20;
+  transform: translateX(0) scale(1.1);
+  filter: blur(0);
+  opacity: 1;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+.activeCard .cardImage {
+  max-width: 320px;
+  max-height: 400px;
+  width: auto;
+  height: auto;
+}
+
+.prevCard {
+  z-index: 5;
+  transform: translateX(-120px) scale(0.6);
+  filter: blur(1px);
+  opacity: 0.7;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.nextCard {
+  z-index: 5;
+  transform: translateX(120px) scale(0.6);
+  filter: blur(1px);
+  opacity: 0.7;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.prevCard .cardImage,
+.nextCard .cardImage {
+  max-width: 150px;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+}
+
+.prevCard:hover,
+.nextCard:hover {
+  filter: blur(0);
+  transform: translateX(-120px) scale(0.7);
+  opacity: 0.9;
+}
+
+.nextCard:hover {
+  transform: translateX(120px) scale(0.7);
+}
+
+/* Remove old styles */
+.currentLesson {
+  display: none;
+}
+
+.currentLessonImage {
+  display: none;
+}
+
+.sideLesson {
+  display: none;
+}
+
+.sideLessonImage {
+  display: none;
+}
+
+.content {
+  display: none;
+}
+
+.lessonImage {
+  display: none;
+}
+
+/* Navigation */
+.navigation {
+  background: #3a3a3a;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #4a4a4a;
+}
+
+.navButton {
+  background: #FB7E6E;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+  min-width: 100px;
+}
+
+.navButton:hover:not(.disabled) {
+  background: #e56b58;
+}
+
+.navButton.disabled {
+  background: #666;
+  color: #999;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.completeButton {
+  background: #4CAF50 !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  padding: 14px 30px !important;
+  min-width: 160px !important;
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+  transform: scale(1.05);
+}
+
+.completeButton:hover {
+  background: #45a049 !important;
+  box-shadow: 0 6px 16px rgba(76, 175, 80, 0.4);
+  transform: scale(1.08);
+}
+
+/* Mobile Responsive Updates */
+@media (max-width: 393px) {
+  .overlay {
+    padding: 10px;
+  }
+  
+  .modal {
+    max-width: 100%;
+    max-height: 95vh;
+  }
+  
+  .header {
+    padding: 12px 16px;
+  }
+  
+  .title {
+    font-size: 1rem;
+  }
+  
+  .carouselContainer {
+    padding: 20px 10px;
+    overflow: hidden; /* Hide side lessons on mobile */
+  }
+  
+  .currentLessonImage {
+    max-width: 320px;
+    max-height: 400px;
+  }
+  
+  .sideLesson {
+    display: none; /* Hide side lessons completely on mobile */
+  }
+  
+  .navigation {
+    padding: 12px 16px;
+  }
+  
+  .navButton {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+    min-width: 80px;
+  }
+} 
+
+/* Keyframe animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    right: -50%;
+  }
+  to {
+    right: -10%;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    left: -50%;
+  }
+  to {
+    left: -10%;
+  }
+} 

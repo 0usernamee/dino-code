@@ -11,15 +11,17 @@ export default function KernedCard({
   duration = "10 hours",
   headerColor = "#fb7e6e",
   width = "355px",
+  onClick = null,
 }) {
   // Ref for the card element
   const cardRef = useRef(null);
 
   return (
     <div
-      className={styles.cardContainer}
+      className={`${styles.cardContainer} ${onClick ? styles.clickable : ""}`}
       ref={cardRef}
       style={{ width: width, height: "360px", flexShrink: 0 }}
+      onClick={onClick}
     >
       <div className={styles.card}>
         {/* Header */}

@@ -16,7 +16,7 @@
 /* Main Content */
 .main {
   flex: 1;
-  padding: 22px 18px;
+  padding: 82px 18px 22px 18px;
   box-sizing: border-box;
   max-width: 393px;
   margin: 0 auto;
@@ -72,4 +72,16 @@
   width: 100%;
   max-width: 357px;
   margin: 0 auto;
+}
+
+.cardLink {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  display: block;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cardLink:hover {
+  transform: translateY(-2px);
 } 
