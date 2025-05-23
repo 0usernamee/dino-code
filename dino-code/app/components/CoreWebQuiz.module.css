@@ -142,6 +142,11 @@
   border-radius: 3px;
 }
 
+.codeHighlightError {
+  color: #ff4757 !important;
+  background: rgba(255, 71, 87, 0.2) !important;
+}
+
 .inputSpace {
   display: inline-block;
   min-width: 20px;

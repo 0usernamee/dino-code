@@ -5,6 +5,15 @@
   margin-right: auto;
 }
 
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover .card {
+  transform: scale(1.04);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
 .card {
   overflow: hidden;
   border: 1px solid #6e7b7d;

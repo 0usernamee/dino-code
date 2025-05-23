@@ -51,7 +51,7 @@ export default function LessonsPage() {
               duration="10 hours"
               headerColor="#00500B"
             />
-            <Link href="/html" className={styles.cardLink}>
+            <Link href="/html-fundamentals" className={styles.cardLink}>
               <KernedCard
                 title="Learn HTML"
                 description="A beginner course on the fundamentals of HTML."

@@ -40,6 +40,12 @@
   margin: auto;
   text-decoration: none;
   color: white;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.logo:hover {
+  opacity: 0.8;
 }
 
 .logoContent {

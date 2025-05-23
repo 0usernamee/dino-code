@@ -1,11 +1,19 @@
+"use client";
 import React from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import ChallengeCarousel from "../components/ChallengeCarousel";
 import KernedCard from "../components/KernedCard";
 import styles from "./page.module.css";
 import NavBar from "../components/Navbar";
 
 export default function HomePage() {
+  const router = useRouter();
+
+  const handleHTMLClick = () => {
+    router.push("/html-fundamentals");
+  };
+
   return (
     <>
       <NavBar />
@@ -103,6 +111,7 @@ export default function HomePage() {
               difficulty="Beginner"
               duration="1 hour"
               headerColor="#fb7e6e"
+              onClick={handleHTMLClick}
             />
           </div>
           <div className={styles.cardWrapper}>

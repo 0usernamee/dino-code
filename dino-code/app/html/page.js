@@ -1,9 +1,17 @@
+"use client";
 import React from "react";
+import { useRouter } from "next/navigation";
 import KernedCard from "../components/KernedCard";
 import NavBar from "../components/Navbar";
 import styles from "./page.module.css";
 
 export default function HTMLPage() {
+  const router = useRouter();
+
+  const handleHTMLFundamentalsClick = () => {
+    router.push("/html-fundamentals");
+  };
+
   return (
     <>
       <NavBar theme="html" />
@@ -80,6 +88,7 @@ export default function HTMLPage() {
               difficulty="Beginner"
               duration="10 hours"
               headerColor="#FB7E6E"
+              onClick={handleHTMLFundamentalsClick}
             />
             <KernedCard
               title="HTML Tables"

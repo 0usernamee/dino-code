@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./CoreWebQuiz.module.css";
 
 export default function CoreWebQuiz({ 
@@ -14,6 +14,17 @@ export default function CoreWebQuiz({
   const [showFeedback, setShowFeedback] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
   const [quizCompleted, setQuizCompleted] = useState(false);
+  const [shuffledOptions, setShuffledOptions] = useState([]);
+
+  // Fisher-Yates shuffle function
+  const shuffleArray = (array) => {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  };
 
   const defaultQuestions = [
     {
@@ -108,6 +119,13 @@ export default function CoreWebQuiz({
   const currentQ = questions[currentQuestion];
   const totalQuestions = questions.length;
 
+  // Shuffle options only when question changes
+  useEffect(() => {
+    if (currentQ?.options) {
+      setShuffledOptions(shuffleArray(currentQ.options));
+    }
+  }, [currentQuestion]);
+
   if (!isOpen) return null;
 
   const handleAnswerSelect = (answer) => {
@@ -147,6 +165,11 @@ export default function CoreWebQuiz({
 
   const handleReset = () => {
     setCurrentQuestion(0);
+    setSelectedAnswer(null);
+    setShowFeedback(false);
+  };
+
+  const handleResetCurrentQuestion = () => {
     setSelectedAnswer(null);
     setShowFeedback(false);
   };
@@ -214,7 +237,9 @@ export default function CoreWebQuiz({
               <span className={styles.codeTag}>&lt;{currentQ.codeText.split('<')[1].split('>')[0]}&gt;</span>
               <span className={styles.codeText}>{currentQ.codeText.split('>')[1]} </span>
               {selectedAnswer ? (
-                <span className={styles.codeHighlight}>{selectedAnswer}</span>
+                <span className={`${styles.codeHighlight} ${showFeedback && !isCorrect ? styles.codeHighlightError : ''}`}>
+                  {selectedAnswer}
+                </span>
               ) : (
                 <span className={styles.inputSpace}>
                   <span className={styles.terminalCursor}></span>
@@ -250,7 +275,7 @@ export default function CoreWebQuiz({
             {/* Answer Options */}
             {!showFeedback && (
               <div className={styles.optionsContainer}>
-                {currentQ.options.map((option) => (
+                {shuffledOptions.map((option) => (
                   <button
                     key={option}
                     className={`${styles.optionButton} ${
@@ -268,8 +293,8 @@ export default function CoreWebQuiz({
             <div className={styles.actionContainer}>
               <button 
                 className={styles.resetButton} 
-                onClick={onReset} 
-                title="Reset Quiz"
+                onClick={handleResetCurrentQuestion} 
+                title="Reset Question"
               >
                 <img src="/reset.svg" alt="Reset" className={styles.resetIcon} />
               </button>

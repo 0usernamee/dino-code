@@ -69,7 +69,7 @@ export default function Navbar({ theme = "default" }) {
         <div className={styles.menuButton} onClick={toggleMenu}>
           <span className={styles.menuIcon}>≡</span>
         </div>
-        <Link href="/" className={styles.logo}>
+        <Link href="/homePage" className={styles.logo}>
           <div className={styles.logoContent}>
             <div className={styles.logoIcon}>
               <Image
