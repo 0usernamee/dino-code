@@ -1,0 +1,104 @@
+.cardContainer {
+  width: 310px;
+  height: 315px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card {
+  overflow: hidden;
+  border: 1px solid #6e7b7d;
+  border-radius: 1rem; /* rounded-2xl */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+  transition: all 0.25s;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+  .cardHeader {
+    height: 38px; /* Exact header height from Figma */
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-shrink: 0;
+    border-bottom: #5a5a5a;
+    border-bottom: 1px solid #6e7b7d;
+  }
+
+
+.cardContent {
+  background-color: white;
+  padding: 1rem;
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardTitle {
+  font-size: 1.75rem; /* Adjusted for smaller card */
+  font-weight: 700; /* font-bold */
+  color: black;
+  line-height: 1.1;
+  word-wrap: break-word;
+}
+
+.titleUnderline {
+  display: block;
+  height: 2px;
+  width: 120px;
+  background-color: black;
+  margin-top: 0.25rem; /* mt-1 */
+  max-width: 100%;
+}
+
+.cardDescription {
+  margin-top: 1rem;
+  color: #5a5a5a;
+  font-size: 1rem; /* Adjusted for smaller card */
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.cardFooter {
+  background-color: white;
+  border-top: 1px solid #6e7b7d;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  height: 60px;
+}
+
+.difficultyContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* gap-2 */
+  color: #5a5a5a;
+}
+
+.difficultyText {
+  font-size: 1rem;
+  font-weight: 500; /* font-medium */
+}
+
+.durationText {
+  font-size: 1rem;
+  color: #5a5a5a;
+}
+
+/* Reduce hover effect on mobile */
+@media (max-width: 768px) {
+  .card:hover {
+    transform: scale(1.02); /* smaller scale on mobile */
+  }
+}
