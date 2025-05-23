@@ -15,7 +15,11 @@ export default function KernedCard({
   const cardRef = useRef(null);
 
   return (
-    <div className={styles.cardContainer} ref={cardRef}>
+    <div
+      className={styles.cardContainer}
+      ref={cardRef}
+      style={{ width: "355px", height: "360px", flexShrink: 0 }}
+    >
       <div className={styles.card}>
         {/* Header */}
         <div
