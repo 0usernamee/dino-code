@@ -11,17 +11,17 @@ export default function AgePage() {
         <div className="container mx-auto px-4 py-8">
           <div className="max-w-md mx-auto">
             <h1 className="text-2xl font-bold text-gray-800 mb-8">
-              What's your main field of expertise
+            Do you have any experience with this subject?
             </h1>
             <div className="space-y-4">
-              <SelectionButton selectionText='Software Development' href='/learn' />
-              <SelectionButton selectionText='Marketing' href='/learn' />
-              <SelectionButton selectionText='Design' href='/learn' />
-              <SelectionButton selectionText='Product Management' href='/learn' />
-              <SelectionButton selectionText='Finance' href='/learn' />
-              <SelectionButton selectionText='Other' href='/learn' />
+              <SelectionButton selectionText='I have no experience' href='./learn' />
+              <SelectionButton selectionText='I have some experience' href='./learn' />
+              <SelectionButton selectionText='I have a lot of experience' href='./learn' />
+              <SelectionButton selectionText='I am re-learning' href='./learn' />
+              <SelectionButton selectionText='I am an expert' href='./learn' />
+              <SelectionButton selectionText='Not sure' href='./learn/page.js' />
             </div>
-          </div>
+          </div>  
         </div>
       </main>
     </div>
