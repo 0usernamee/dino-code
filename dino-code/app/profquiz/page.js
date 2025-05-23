@@ -7,11 +7,11 @@ import Link from 'next/link';
 
 export default function AgePage() {
   const handleClick = () => {
-    window.location.href = '/homepage';
+    window.location.href = '/homePage';
   };
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className={styles.backgroundFull}>
       <Navbar />
       <main className={styles.main}>
         <div className="container mx-auto px-4 py-8">
@@ -21,7 +21,7 @@ export default function AgePage() {
               take a proficiency quiz?
             </h1>
             
-            <div className="flex flex-col gap-4 w-full max-w-sm mx-auto">
+            <div className="flex flex-col gap-8 w-full max-w-sm mx-auto">
               <button 
                 onClick={handleClick}
                 className="w-full bg-black text-white py-4 px-6 rounded-lg font-medium hover:bg-gray-800 transition-colors"

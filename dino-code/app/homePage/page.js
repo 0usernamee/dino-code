@@ -1,19 +1,10 @@
-"use client";
 import React from "react";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
 import ChallengeCarousel from "../components/ChallengeCarousel";
 import KernedCard from "../components/KernedCard";
 import styles from "./page.module.css";
 import NavBar from "../components/Navbar";
 
 export default function HomePage() {
-  const router = useRouter();
-
-  const handleHTMLClick = () => {
-    router.push("/html-fundamentals");
-  };
-
   return (
     <>
       <NavBar />
@@ -50,9 +41,7 @@ export default function HomePage() {
                 strokeLinecap="round"
               />
             </svg>
-            <span className={styles.searchPlaceholder}>
-              Find your lesson...
-            </span>
+            <span className={styles.searchPlaceholder}>Find your lesson...</span>
           </div>
         </div>
         {/* Challenge Carousel */}
@@ -61,46 +50,41 @@ export default function HomePage() {
         </div>
         {/* In Progress Section */}
         <div className={styles.progressSection}>
-          <div className={styles.progressHeader}></div>
-          <div className={styles.progressContent}>
-            <h2 className={styles.progressTitle}>In Progress</h2>
-            <div className={styles.progressCard}>
-              <div className={styles.progressCardTitle}>
-                JavaScript Fundamentals
-              </div>
-              <div className={styles.progressRow}>
-                <span className={styles.progressNumber}>4/6</span>
-                <span className={styles.progressLessons}>Lessons</span>
-              </div>
-              <div className={styles.progressBarBg}>
-                <div
-                  className={styles.progressBarFill}
-                  style={{ width: "66%" }}
-                ></div>
-              </div>
+          <h2 className={styles.progressTitle}>In Progress</h2>
+          <div className={styles.progressCard}>
+            <div className={styles.progressCardTitle}>
+              JavaScript Fundamentals
             </div>
-            <div className={styles.progressCard}>
-              <div className={styles.progressCardTitle}>HTML</div>
-              <div className={styles.progressRow}>
-                <span className={styles.progressNumber}>4/6</span>
-                <span className={styles.progressLessons}>Lessons</span>
-              </div>
-              <div className={styles.progressBarBg}>
-                <div
-                  className={styles.progressBarFill}
-                  style={{ width: "66%" }}
-                ></div>
-              </div>
+            <div className={styles.progressRow}>
+              <span className={styles.progressNumber}>4/6</span>
+              <span className={styles.progressLessons}>Lessons</span>
+            </div>
+            <div className={styles.progressBarBg}>
+              <div
+                className={styles.progressBarFill}
+                style={{ width: "66%" }}
+              ></div>
+            </div>
+          </div>
+          <div className={styles.progressCard}>
+            <div className={styles.progressCardTitle}>HTML</div>
+            <div className={styles.progressRow}>
+              <span className={styles.progressNumber}>4/6</span>
+              <span className={styles.progressLessons}>Lessons</span>
+            </div>
+            <div className={styles.progressBarBg}>
+              <div
+                className={styles.progressBarFill}
+                style={{ width: "66%" }}
+              ></div>
             </div>
           </div>
         </div>
         {/* See all lessons */}
-        <Link href="/lessons" className={styles.lessonsHeaderLink}>
-          <div className={styles.lessonsHeader}>
-            <span className={styles.lessonsTitle}>See all lessons</span>
-            <span className={styles.lessonsArrow}>→</span>
-          </div>
-        </Link>
+        <div className={styles.lessonsHeader}>
+          <span className={styles.lessonsTitle}>See all lessons</span>
+          <span className={styles.lessonsArrow}>→</span>
+        </div>
         {/* Lesson Cards Slider */}
         <div className={styles.cardsRow}>
           <div className={styles.cardWrapper}>
@@ -111,7 +95,6 @@ export default function HomePage() {
               difficulty="Beginner"
               duration="1 hour"
               headerColor="#fb7e6e"
-              onClick={handleHTMLClick}
             />
           </div>
           <div className={styles.cardWrapper}>

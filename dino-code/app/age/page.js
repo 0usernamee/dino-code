@@ -1,4 +1,3 @@
-
 // app/age/page.js
 import SelectionButton from '../components/selectionButton.js';
 import Navbar from '../components/Navbar.js';
@@ -6,7 +5,7 @@ import styles from './page.module.css';
 
 export default function AgePage() {
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className={styles.backgroundFull}>
       <Navbar />
       <main className={styles.main}>
         <div className="container mx-auto px-4 py-8">
@@ -14,12 +13,12 @@ export default function AgePage() {
             <h1 className="text-2xl font-bold text-gray-800 mb-8">
               What's your age group?
             </h1>
-            <div className="space-y-4">
-              <SelectionButton selectionText='18 or under' />
-              <SelectionButton selectionText='19-24' />
-              <SelectionButton selectionText='25-34' />
-              <SelectionButton selectionText='35-44' />
-              <SelectionButton selectionText='45 or over' />
+            <div className={styles.buttonContainer}>
+              <SelectionButton selectionText='18 or under' href='/expertise' />
+              <SelectionButton selectionText='19-24' href='/expertise' />
+              <SelectionButton selectionText='25-34' href='/expertise' />
+              <SelectionButton selectionText='35-44' href='/expertise' />
+              <SelectionButton selectionText='45 or over' href='/expertise' />
             </div>
           </div>
         </div>
