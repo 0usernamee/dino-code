@@ -6,7 +6,7 @@
   max-width: 393px;
   margin: 0 auto;
   background: #EFFFEF;
-  background-image: url('/wave.png');
+  background-image: url('/htmlWave.png');
   background-position: center top;
   background-repeat: no-repeat;
   background-size: 393px auto;
@@ -28,6 +28,70 @@
   font-weight: 700;
   color: #000;
   margin: 0 0 24px 0;
+}
+
+/* Top Carousel - Small Cards */
+.topCarousel {
+  display: flex;
+  gap: 16px;
+  width: 100vw;
+  height: 120px;
+  margin: 0 -18px 32px -18px;
+  overflow-x: auto;
+  box-sizing: border-box;
+  padding: 0 18px 0 18px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  direction: ltr;
+}
+
+.topCarousel::-webkit-scrollbar {
+  display: none;
+}
+
+.smallCard:first-child {
+  margin-left: 0;
+}
+
+.smallCard {
+  width: 179px;
+  height: 120px;
+  background: #fff;
+  border: 1px solid #6E7B7D;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+
+.smallCardHeader {
+  width: 100%;
+  height: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 11px 11px 0 0;
+  border-bottom: 1px solid #6E7B7D;
+  overflow: hidden;
+}
+
+.smallCardContent {
+  padding: 12px;
+  height: calc(120px - 23px - 24px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.smallCardTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin: 0;
+  line-height: 1.2;
 }
 
 /* Search Bar */

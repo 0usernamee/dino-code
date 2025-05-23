@@ -10,6 +10,7 @@ export default function KernedCard({
   difficulty = "Beginner",
   duration = "10 hours",
   headerColor = "#fb7e6e",
+  width = "355px",
 }) {
   // Ref for the card element
   const cardRef = useRef(null);
@@ -18,7 +19,7 @@ export default function KernedCard({
     <div
       className={styles.cardContainer}
       ref={cardRef}
-      style={{ width: "355px", height: "360px", flexShrink: 0 }}
+      style={{ width: width, height: "360px", flexShrink: 0 }}
     >
       <div className={styles.card}>
         {/* Header */}
