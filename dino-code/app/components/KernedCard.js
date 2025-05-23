@@ -35,7 +35,7 @@ export default function KernedCard({
           <p className={styles.cardDescription}>{description}</p>
         </div>
 
-        {/* Footer */}
+        {/* Footer - Ensuring this is always rendered */}
         <div className={styles.cardFooter}>
           <div className={styles.difficultyContainer}>
             <svg
