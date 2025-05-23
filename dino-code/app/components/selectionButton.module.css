@@ -10,5 +10,5 @@
 }
 
 .selection_box:hover {
-    background-color: grey;
+    scale: 110%;
 }

@@ -1,4 +1,3 @@
-
 // app/age/page.js
 import SelectionButton from '../components/selectionButton.js';
 import Navbar from '../components/Navbar.js';
@@ -12,14 +11,15 @@ export default function AgePage() {
         <div className="container mx-auto px-4 py-8">
           <div className="max-w-md mx-auto">
             <h1 className="text-2xl font-bold text-gray-800 mb-8">
-              What's your age group?
+            How long can you learn each day
             </h1>
             <div className="space-y-4">
-              <SelectionButton selectionText='18 or under' />
-              <SelectionButton selectionText='19-24' />
-              <SelectionButton selectionText='25-34' />
-              <SelectionButton selectionText='35-44' />
-              <SelectionButton selectionText='45 or over' />
+              <SelectionButton selectionText='5 mins a day' href='/learn' />
+              <SelectionButton selectionText='10 mins a day' href='/learn' />
+              <SelectionButton selectionText='20 mins a day' href='/learn' />
+              <SelectionButton selectionText='30 mins a day' href='/learn' />
+              <SelectionButton selectionText='60 mins a day' href='/learn' />
+              <SelectionButton selectionText='2 or more hours a day' href='/learn' />
             </div>
           </div>
         </div>
