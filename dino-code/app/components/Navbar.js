@@ -1,7 +1,8 @@
-
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './Navbar.module.css';
+import navLogo from '../images/navLogo.svg';
 
 export default function Navbar() {
   return (
@@ -12,9 +13,14 @@ export default function Navbar() {
       <Link href="/" className={styles.logo}>
         <div className={styles.logoContent}>
           <div className={styles.logoIcon}>
-            <div className={styles.dino}></div>
+            <Image 
+              src={navLogo} 
+              alt="DinoCode Logo" 
+              width={120} 
+              height={120}
+              className={styles.dino}
+            />
           </div>
-          <span className={styles.logoText}>DinoCode</span>
         </div>
       </Link>
     </nav>
