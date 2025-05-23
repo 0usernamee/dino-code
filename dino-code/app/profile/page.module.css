@@ -1,0 +1,61 @@
+.profileBg {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #b7e2b7 0%, #e8f5e9 100%);
+  padding-bottom: 32px;
+}
+.content {
+  margin-top: 80px;
+  /* The margin is transparent by default, so no background needed */
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 32px 0 0 0;
+  max-width: 393px;
+  margin: 0 auto;
+}
+
+.greeting {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: #222;
+}
+
+.profilePic {
+  width: 204px;
+  height: 204px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  margin-bottom: 0.5rem;
+}
+
+.expBadge {
+  background: #357a38;
+  color: #fff;
+  font-size: 1.1rem;
+  border-radius: 16px;
+  padding: 0.3rem 1.2rem;
+  display: inline-block;
+  font-weight: 600;
+  margin-left: 8px;
+}
+
+.sectionCard {
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  padding: 1.2rem 1.2rem 1.5rem 1.2rem;
+  margin: 0 auto 1.5rem auto;
+  max-width: 393px;
+}
+
+.sectionTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #111;
+}
