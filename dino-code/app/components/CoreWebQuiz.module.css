@@ -1,0 +1,427 @@
+/* Page Container */
+.overlay {
+  min-height: 100vh;
+  background: #f0f9f0;
+  padding-top: 70px; /* Space for navbar */
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+/* Container */
+.container {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+/* Progress Bar */
+.progressContainer {
+  padding: 20px 0;
+  background: #f0f9f0;
+}
+
+.progressBar {
+  display: flex;
+  gap: 4px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.progressSegment {
+  flex: 1;
+  height: 21px;
+  background: #ddd;
+  border-radius: 21px;
+  transition: background-color 0.3s ease;
+}
+
+.progressSegment.active {
+  background: #4CAF50;
+}
+
+/* Question Section */
+.questionSection {
+  flex: 1;
+  padding: 0 0 20px 0;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 180px); /* Account for navbar and progress bar */
+}
+
+.questionContent {
+  flex: 1;
+}
+
+.bottomSection {
+  margin-top: auto;
+  padding-bottom: 20px;
+}
+
+.questionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.questionTitle {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  color: #333;
+}
+
+.resetButton {
+  background: #6B9C7A;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  color: white;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.resetButton:hover {
+  background: #5a8668;
+  transform: rotate(45deg);
+}
+
+.resetIcon {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1); /* Makes it white */
+}
+
+.questionPrompt {
+  font-size: 16px;
+  color: #666;
+  margin: 0 0 20px 0;
+  width: 100%;
+}
+
+/* Code Block */
+.codeBlock {
+  background: #1a1a1a;
+  color: white;
+  padding: 20px;
+  border-radius: 0;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0 -20px 30px -20px;
+  position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.codeText {
+  color: #fff;
+}
+
+.codeTag {
+  color: #9effaa;
+}
+
+.codeHighlight {
+  color: #4da6ff;
+  background: rgba(77, 166, 255, 0.2);
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.inputSpace {
+  display: inline-block;
+  min-width: 20px;
+  height: 20px;
+  position: relative;
+  border-radius: 2px;
+  margin: 0 2px;
+}
+
+.terminalCursor {
+  display: inline-block;
+  width: 3px;
+  height: 10px;
+  background: white;
+  animation: terminalBlink 1s infinite;
+  position: absolute;
+  left: 0px;
+  top: 10px;
+}
+
+@keyframes terminalBlink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Feedback */
+.feedback {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 40px 20px;
+}
+
+.feedbackIcon {
+  margin-bottom: 30px;
+}
+
+.checkIcon {
+  width: 120px;
+  height: 120px;
+  background: #4CAF50;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  color: white;
+  font-size: 60px;
+  font-weight: bold;
+  box-shadow: 0 8px 24px rgba(76, 175, 80, 0.3);
+}
+
+.xIcon {
+  width: 120px;
+  height: 120px;
+  background: #f44336;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  color: white;
+  font-size: 60px;
+  font-weight: bold;
+  box-shadow: 0 8px 24px rgba(244, 67, 54, 0.3);
+}
+
+.feedbackText {
+  font-size: 18px;
+  color: #333;
+  margin: 0;
+  line-height: 1.4;
+  max-width: 280px;
+}
+
+/* Options */
+.optionsContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.optionButton {
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 12px 8px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  flex: 1;
+  white-space: nowrap;
+}
+
+.optionButton:hover {
+  border-color: #6B9C7A;
+  background: #f8fff8;
+}
+
+.optionButton.selected {
+  border-color: #6B9C7A;
+  background: #e8f5e8;
+  color: #2e7d32;
+}
+
+/* Action Container */
+.actionContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Buttons */
+.checkButton {
+  background: #6B9C7A;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 30px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 120px;
+}
+
+.checkButton:hover:not(.disabled) {
+  background: #5a8668;
+  transform: translateY(-1px);
+}
+
+.checkButton.disabled {
+  background: #6B9C7A;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.nextButton {
+  background: #6B9C7A;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 30px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 140px;
+}
+
+.nextButton:hover {
+  background: #5a8668;
+  transform: translateY(-1px);
+}
+
+.tryAgainButton {
+  background: #6B9C7A;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 30px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 120px;
+}
+
+.tryAgainButton:hover {
+  background: #5a8668;
+  transform: translateY(-1px);
+}
+
+/* Refresh button */
+.refreshButton {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.refreshButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Completion Screen */
+.completionScreen {
+  background: white;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 400px;
+  margin: 20px auto;
+  position: relative;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.closeButton {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.closeButton:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.completionContent {
+  padding: 60px 40px 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.completionIcon {
+  margin-bottom: 20px;
+}
+
+.completionTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 30px 0;
+}
+
+.rewardSection {
+  margin-bottom: 40px;
+}
+
+.rewardText {
+  font-size: 16px;
+  color: #666;
+  margin: 0 0 10px 0;
+}
+
+.expReward {
+  font-size: 20px;
+  font-weight: bold;
+  color: #4CAF50;
+  background: #e8f5e8;
+  padding: 8px 16px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.continueButton {
+  background: #6B9C7A;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 40px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  max-width: 200px;
+}
+
+.continueButton:hover {
+  background: #5a8668;
+  transform: translateY(-1px);
+} 

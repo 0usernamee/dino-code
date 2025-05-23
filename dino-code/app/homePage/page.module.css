@@ -10,7 +10,7 @@
   background-position: center top;
   background-repeat: no-repeat;
   background-size: 393px auto;
-  padding: 18px;
+  padding: 78px 18px 18px 18px;
   box-sizing: border-box;
   margin: 0 auto;
   position: relative;
@@ -93,34 +93,64 @@
   width: 100%;
   max-width: 357px;
   background: #fff;
-  border-radius: 18px 18px 18px 18px;
+  border: 1px solid #6E7B7D;
+  border-radius: 18px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.10);
-  padding: 1rem 1rem 1rem 1rem;
   margin-bottom: 1.2rem;
-  height: 334px;
-  box-sizing: border-box;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
 }
+
+.progressHeader {
+  background: #1b5e20;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px 20px;
+  margin: 0;
+}
+
+.progressContent {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.progressItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.progressItemTitle {
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
 .progressTitle {
   font-size: 1.4rem;
   font-weight: 700;
-  margin-bottom: 1 rem;
+  margin: 0 0 12px 0;
   color: #000;
 }
+
 .progressCard {
   background: #fff;
   border-radius: 16px;
-  box-shadow: 0 1px 6px rgba(0,0,0,0.10);
-  padding: 0.9rem 1.1rem 0.9rem 1.1rem;
-  margin: 0.6rem 0;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.15);
+  padding: 12px 16px;
+  margin: 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   min-width: 0;
   box-sizing: border-box;
 }
+
 .progressCardTitle {
   color: #7a868c;
   font-size: 1.15rem;
@@ -220,4 +250,16 @@
   font-size: 1.1rem;
   font-weight: 400;
   font-family: inherit;
+}
+.lessonsHeaderLink {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  width: 100%;
+  max-width: 357px;
+}
+
+.lessonsHeaderLink:hover .lessonsTitle {
+  color: #1b5e20;
+  transition: color 0.2s ease;
 }
