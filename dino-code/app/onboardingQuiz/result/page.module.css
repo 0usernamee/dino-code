@@ -1,0 +1,10 @@
+.resultContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 16;
+}
+
+.resultText {
+    margin-bottom: 48;
+}
