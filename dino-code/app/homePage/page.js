@@ -3,6 +3,7 @@ import ChallengeCarousel from "../components/ChallengeCarousel";
 import KernedCard from "../components/KernedCard";
 import styles from "./page.module.css";
 import NavBar from "../components/Navbar";
+import Link from "next/link";
 
 export default function HomePage() {
   return (
@@ -15,8 +16,10 @@ export default function HomePage() {
             <h1 className={styles.greeting}>Hi, David</h1>
           </div>
           <div className={styles.profileGroup}>
-            {/* Raw test: local image, no className or styling */}
-            <img src="/Profilepic.png" alt="Profile" />
+            {/* Profile image links to profile page */}
+            <Link href="/profile">
+              <img src="/Profilepic.png" alt="Profile" style={{ cursor: 'pointer' }} />
+            </Link>
             <div className={styles.expBadge}>28 EXP</div>
           </div>
         </div>
