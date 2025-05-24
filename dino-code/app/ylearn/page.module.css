@@ -49,8 +49,8 @@
     width: 100vw;
     background: #e8f5e9 url('./images/dinoback.png') center bottom no-repeat;
     background-size: cover;
-    display: flex;
-    flex-direction: column;
+        display: flex;
+        flex-direction: column;
 }
 
 .buttonContainer {
