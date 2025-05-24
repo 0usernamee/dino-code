@@ -2,6 +2,7 @@ import Navbar from '../components/Navbar';
 import ChallengeCarousel from '../components/ChallengeCarousel';
 import styles from './page.module.css';
 import Image from 'next/image';
+import Footer from "../components/Footer";
 
 export default function ProfilePage() {
   return (
@@ -32,6 +33,7 @@ export default function ProfilePage() {
           Current Streak
         </div>
         <ChallengeCarousel />
+        <Footer />
       </div>
     </div>
   );
