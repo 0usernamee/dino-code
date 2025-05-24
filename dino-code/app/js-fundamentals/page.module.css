@@ -1,0 +1,103 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 393px;
+  margin: 0 auto;
+  background: #EFFFEF;
+  background-image: url('/jsWave.png');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 393px auto;
+  position: relative;
+}
+
+.main {
+  flex: 1;
+  padding: 82px 18px 22px 18px;
+  box-sizing: border-box;
+  max-width: 393px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pageTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 24px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.progressCard {
+  width: 100%;
+  max-width: 357px;
+  background: #fff;
+  border: 1px solid #6E7B7D;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  margin-bottom: 32px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.progressTitle {
+  background: #00500B;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px 20px;
+  margin: 0;
+}
+
+.progressInfo {
+  padding: 16px 20px 8px 20px;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.progressText {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.progressLabel {
+  font-size: 1.1rem;
+  color: #7a868c;
+  font-weight: 600;
+}
+
+.progressBar {
+  width: calc(100% - 40px);
+  height: 18px;
+  background: #e0e3e2;
+  border-radius: 999px;
+  margin: 0 20px 16px 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.progressFill {
+  height: 100%;
+  background: #43a533;
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+.lessonsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 357px;
+  align-items: center;
+} 

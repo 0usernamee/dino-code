@@ -186,7 +186,7 @@ body.menuOpen {
 }
 
 .jsTheme .dino {
-  filter: brightness(0) saturate(100%) invert(84%) sepia(58%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+  filter: brightness(2.2) saturate(30%) sepia(20%) hue-rotate(70deg) contrast(105%) !important;
 }
 
 .cssTheme .header,

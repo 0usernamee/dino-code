@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 import CoreWebQuiz from "../../components/CoreWebQuiz";
 
 export default function CoreWebTechnologyQuizPage() {
@@ -27,6 +28,7 @@ export default function CoreWebTechnologyQuizPage() {
         onReset={handleQuizReset}
         quizTitle="Core Web Technology Quiz"
       />
+      <Footer theme="html" />
     </>
   );
 } 

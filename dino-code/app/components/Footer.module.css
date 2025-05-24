@@ -1,0 +1,228 @@
+.footer {
+  background: #1b5e20;
+  color: white;
+  padding: 40px 20px 20px 20px;
+  margin-top: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footerContent {
+  max-width: 393px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Logo and Branding */
+.brandingSection {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.logo {
+  text-decoration: none;
+  color: white;
+  transition: opacity 0.2s ease;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+.logoContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.logoIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoText {
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+}
+
+.dino {
+  filter: brightness(0) invert(1);
+}
+
+/* Navigation Section */
+.navSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.navGroup {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.navLink {
+  color: white;
+  text-decoration: underline;
+  font-size: 16px;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.navLink:hover {
+  opacity: 0.8;
+}
+
+/* Divider */
+.divider {
+  width: 100%;
+  max-width: 280px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.3);
+  margin: 0 auto;
+}
+
+/* Contact Section */
+.contactSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.contactTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+  text-align: center;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.socialIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.socialIcon:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Legal Section */
+.legalSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.legalLinks {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.legalLink {
+  color: white;
+  text-decoration: underline;
+  font-size: 14px;
+  font-weight: 400;
+  transition: opacity 0.2s ease;
+}
+
+.legalLink:hover {
+  opacity: 0.8;
+}
+
+/* Copyright */
+.copyright {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  margin-top: 8px;
+}
+
+/* Theme variations */
+.htmlTheme {
+  background: #FB7E6E;
+}
+
+.htmlTheme .dino {
+  filter: brightness(0) saturate(100%) invert(17%) sepia(45%) saturate(1847%) hue-rotate(323deg) brightness(89%) contrast(94%);
+}
+
+.jsTheme {
+  background: #00500B;
+}
+
+.jsTheme .dino {
+  filter: brightness(2.2) saturate(30%) sepia(20%) hue-rotate(70deg) contrast(105%);
+}
+
+.cssTheme {
+  background: #5B64C2;
+}
+
+.cssTheme .dino {
+  filter: brightness(0) saturate(100%) invert(19%) sepia(85%) saturate(1654%) hue-rotate(224deg) brightness(93%) contrast(105%);
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+  .footer {
+    padding: 32px 16px 16px 16px;
+  }
+  
+  .footerContent {
+    gap: 20px;
+  }
+  
+  .navGroup {
+    gap: 16px;
+  }
+  
+  .navLink {
+    font-size: 14px;
+  }
+  
+  .legalLinks {
+    gap: 12px;
+  }
+  
+  .socialIcons {
+    gap: 12px;
+  }
+  
+  .socialIcon {
+    width: 40px;
+    height: 40px;
+  }
+} 
