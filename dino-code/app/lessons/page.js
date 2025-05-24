@@ -1,7 +1,9 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import KernedCard from "../components/KernedCard";
 import NavBar from "../components/Navbar";
+import Footer from "../components/Footer";
 import styles from "./page.module.css";
 
 export default function LessonsPage() {
@@ -43,15 +45,17 @@ export default function LessonsPage() {
 
           {/* Course Cards */}
           <div className={styles.coursesContainer}>
-            <KernedCard
-              title="Learn JavaScript"
-              description="A beginner course on how to use JavaScript."
-              progress={{ current: 0, total: 10 }}
-              difficulty="Beginner"
-              duration="10 hours"
-              headerColor="#00500B"
-            />
-            <Link href="/html-fundamentals" className={styles.cardLink}>
+            <Link href="/js" className={styles.cardLink}>
+              <KernedCard
+                title="Learn JavaScript"
+                description="A beginner course on how to use JavaScript."
+                progress={{ current: 0, total: 10 }}
+                difficulty="Beginner"
+                duration="10 hours"
+                headerColor="#00500B"
+              />
+            </Link>
+            <Link href="/html" className={styles.cardLink}>
               <KernedCard
                 title="Learn HTML"
                 description="A beginner course on the fundamentals of HTML."
@@ -61,17 +65,20 @@ export default function LessonsPage() {
                 headerColor="#FB7E6E"
               />
             </Link>
-            <KernedCard
-              title="Learn CSS"
-              description="A beginner course on the fundamentals of CSS."
-              progress={{ current: 0, total: 10 }}
-              difficulty="Beginner"
-              duration="10 hours"
-              headerColor="#5B64C2"
-            />
+            <Link href="/css" className={styles.cardLink}>
+              <KernedCard
+                title="Learn CSS"
+                description="A beginner course on the fundamentals of CSS."
+                progress={{ current: 0, total: 10 }}
+                difficulty="Beginner"
+                duration="10 hours"
+                headerColor="#5B64C2"
+              />
+            </Link>
           </div>
         </main>
       </div>
+      <Footer />
     </>
   );
 }

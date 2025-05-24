@@ -6,54 +6,48 @@ import NavBar from "../components/Navbar";
 import Footer from "../components/Footer";
 import styles from "./page.module.css";
 
-export default function HTMLPage() {
+export default function CSSPage() {
   const router = useRouter();
 
-  const handleHTMLFundamentalsClick = () => {
-    router.push("/html-fundamentals");
+  const handleCSSFundamentalsClick = () => {
+    router.push("/css-fundamentals");
   };
 
   return (
     <>
-      <NavBar theme="html" />
+      <NavBar theme="css" />
       <div className={styles.container}>
-        {/* Main Content */}
         <main className={styles.main}>
-          {/* Page Title */}
-          <h1 className={styles.pageTitle}>HTML</h1>
-
-          {/* Small Cards Carousel */}
+          <h1 className={styles.pageTitle}>CSS</h1>
           <div className={styles.topCarousel}>
             <div className={styles.smallCard}>
               <div
                 className={styles.smallCardHeader}
-                style={{ backgroundColor: "#FB7E6E" }}
+                style={{ backgroundColor: "#5B64C2" }}
               ></div>
               <div className={styles.smallCardContent}>
-                <h3 className={styles.smallCardTitle}>Introduction to HTML</h3>
+                <h3 className={styles.smallCardTitle}>CSS Introduction</h3>
               </div>
             </div>
             <div className={styles.smallCard}>
               <div
                 className={styles.smallCardHeader}
-                style={{ backgroundColor: "#FB7E6E" }}
+                style={{ backgroundColor: "#5B64C2" }}
               ></div>
               <div className={styles.smallCardContent}>
-                <h3 className={styles.smallCardTitle}>HTML Intermediate</h3>
+                <h3 className={styles.smallCardTitle}>CSS Intermediate</h3>
               </div>
             </div>
             <div className={styles.smallCard}>
               <div
                 className={styles.smallCardHeader}
-                style={{ backgroundColor: "#FB7E6E" }}
+                style={{ backgroundColor: "#5B64C2" }}
               ></div>
               <div className={styles.smallCardContent}>
-                <h3 className={styles.smallCardTitle}>HTML Professional</h3>
+                <h3 className={styles.smallCardTitle}>CSS Professional</h3>
               </div>
             </div>
           </div>
-
-          {/* Search Bar */}
           <div className={styles.searchBarWrapper}>
             <div className={styles.searchBarBox}>
               <svg
@@ -63,78 +57,68 @@ export default function HTMLPage() {
                 viewBox="0 0 20 20"
                 fill="none"
               >
-                <circle cx="9" cy="9" r="7" stroke="#999" strokeWidth="2" />
+                <circle cx="9" cy="9" r="7" stroke="#222" strokeWidth="2" />
                 <line
                   x1="14.4142"
                   y1="14.5858"
                   x2="18"
                   y2="18"
-                  stroke="#999"
+                  stroke="#222"
                   strokeWidth="2"
                   strokeLinecap="round"
                 />
               </svg>
               <span className={styles.searchPlaceholder}>
-                Find your topic...
+                Find your course...
               </span>
             </div>
           </div>
-
-          {/* Course Cards */}
           <div className={styles.coursesContainer}>
             <KernedCard
-              title="HTML Fundamentals"
-              description="A beginner course on the fundamentals of HTML."
+              title="CSS Fundamentals"
+              description="A beginner course on the fundamentals of CSS."
               progress={{ current: 0, total: 10 }}
               difficulty="Beginner"
               duration="10 hours"
-              headerColor="#FB7E6E"
-              onClick={handleHTMLFundamentalsClick}
+              headerColor="#5B64C2"
+              onClick={handleCSSFundamentalsClick}
             />
             <KernedCard
-              title="HTML Tables"
-              description="A beginner course on HTML tables and data structure."
+              title="CSS Class Selector"
+              description="A beginner course on the fundamentals of CSS."
               progress={{ current: 0, total: 10 }}
               difficulty="Beginner"
               duration="10 hours"
-              headerColor="#FB7E6E"
+              headerColor="#5B64C2"
             />
             <KernedCard
-              title="HTML Forms"
-              description="A beginner course on HTML forms and input elements."
+              title="CSS ID Selectors"
+              description="A beginner course on the fundamentals of CSS."
               progress={{ current: 0, total: 10 }}
               difficulty="Beginner"
               duration="10 hours"
-              headerColor="#FB7E6E"
+              headerColor="#5B64C2"
             />
             <KernedCard
-              title="HTML Intermediate"
-              description="A beginner course on the fundamentals of HTML."
+              title="CSS Media Queries"
+              description="A beginner course on the fundamentals of CSS."
               progress={{ current: 0, total: 10 }}
               difficulty="Beginner"
               duration="10 hours"
-              headerColor="#FB7E6E"
+              headerColor="#5B64C2"
             />
             <KernedCard
-              title="HTML Classes & Objects"
-              description="A beginner course on the fundamentals of HTML."
+              title="CSS Flex Box"
+              description="A beginner course on the fundamentals of CSS."
               progress={{ current: 0, total: 10 }}
               difficulty="Beginner"
               duration="10 hours"
-              headerColor="#FB7E6E"
-            />
-            <KernedCard
-              title="HTML Inheritance"
-              description="A beginner course on the fundamentals of HTML."
-              progress={{ current: 0, total: 10 }}
-              difficulty="Beginner"
-              duration="10 hours"
-              headerColor="#FB7E6E"
+              headerColor="#5B64C2"
             />
           </div>
         </main>
       </div>
-      <Footer theme="html" />
+      <Footer theme="css" />
     </>
   );
 }

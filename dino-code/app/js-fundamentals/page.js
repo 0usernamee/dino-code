@@ -1,62 +1,26 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import LessonCard from "../components/LessonCard";
 import LessonOverlay from "../components/LessonOverlay";
 import NavBar from "../components/Navbar";
 import Footer from "../components/Footer";
 import styles from "./page.module.css";
 
-export default function HTMLFundamentalsPage() {
+export default function JSFundamentalsPage() {
   const [selectedLesson, setSelectedLesson] = useState(null);
   const [lessons, setLessons] = useState([
     {
       id: 1,
-      title: "The Core Web Technology",
+      title: "JS Core of Web Technology",
       isCompleted: false,
-      pages: 5,
-      svgFolder: "html-fundamentals/coreWeb",
+      pages: 3,
+      svgFolder: "js-fundamentals/coreWeb",
     },
-    { id: 2, title: "HTML Code", isCompleted: false, pages: 0 },
-    { id: 3, title: "Headings", isCompleted: false, pages: 0 },
-    { id: 4, title: "Images", isCompleted: false, pages: 0 },
-    { id: 5, title: "Document Setup", isCompleted: false, pages: 0 },
+    { id: 2, title: "JavaScript Programming", isCompleted: false, pages: 0 },
+    { id: 3, title: "Syntax", isCompleted: false, pages: 0 },
+    { id: 4, title: "Case Sensitivity", isCompleted: false, pages: 0 },
+    { id: 5, title: "Error Codes", isCompleted: false, pages: 0 },
   ]);
-
-  // Check completion status on component mount
-  useEffect(() => {
-    const coreWebCompleted =
-      localStorage.getItem("coreWebTechCompleted") === "true";
-
-    setLessons((prevLessons) =>
-      prevLessons.map((lesson) =>
-        lesson.id === 1 ? { ...lesson, isCompleted: coreWebCompleted } : lesson
-      )
-    );
-  }, []);
-
-  // Check completion status when page becomes visible (user returns from quiz)
-  useEffect(() => {
-    const handleVisibilityChange = () => {
-      if (!document.hidden) {
-        const coreWebCompleted =
-          localStorage.getItem("coreWebTechCompleted") === "true";
-
-        setLessons((prevLessons) =>
-          prevLessons.map((lesson) =>
-            lesson.id === 1
-              ? { ...lesson, isCompleted: coreWebCompleted }
-              : lesson
-          )
-        );
-      }
-    };
-
-    document.addEventListener("visibilitychange", handleVisibilityChange);
-
-    return () => {
-      document.removeEventListener("visibilitychange", handleVisibilityChange);
-    };
-  }, []);
 
   const handleLessonClick = (lesson) => {
     if (lesson.pages > 0) {
@@ -80,15 +44,15 @@ export default function HTMLFundamentalsPage() {
 
   return (
     <>
-      <NavBar theme="html" />
+      <NavBar theme="js" />
       <div className={styles.container}>
         <main className={styles.main}>
           {/* Page Title */}
-          <h1 className={styles.pageTitle}>HTML Fundamentals</h1>
+          <h1 className={styles.pageTitle}>JavaScript Fundamentals</h1>
 
           {/* Progress Card */}
           <div className={styles.progressCard}>
-            <h2 className={styles.progressTitle}>HTML Fundamentals</h2>
+            <h2 className={styles.progressTitle}>JavaScript Fundamentals</h2>
             <div className={styles.progressInfo}>
               <span className={styles.progressText}>
                 {completedLessons}/{totalLessons}
@@ -110,7 +74,7 @@ export default function HTMLFundamentalsPage() {
                 key={lesson.id}
                 title={lesson.title}
                 isCompleted={lesson.isCompleted}
-                headerColor="#FB7E6E"
+                headerColor="#00500B"
                 onClick={() => handleLessonClick(lesson)}
               />
             ))}
@@ -118,7 +82,7 @@ export default function HTMLFundamentalsPage() {
         </main>
       </div>
 
-      <Footer theme="html" />
+      <Footer theme="javascript" />
 
       {/* Lesson Overlay */}
       {selectedLesson && (

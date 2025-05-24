@@ -3,6 +3,7 @@ import ChallengeCarousel from "../components/ChallengeCarousel";
 import KernedCard from "../components/KernedCard";
 import styles from "./page.module.css";
 import NavBar from "../components/Navbar";
+import Footer from "../components/Footer";
 import Link from "next/link";
 
 export default function HomePage() {
@@ -100,27 +101,32 @@ export default function HomePage() {
         {/* Lesson Cards Slider */}
         <div className={styles.cardsRow}>
           <div className={styles.cardWrapper}>
-            <KernedCard
-              title="The Fundamentals of HTML"
-              description="Every site you use is built with HTML! With this course, you'll be able to understand simple HTML syntax."
-              progress={{ current: 0, total: 10 }}
-              difficulty="Beginner"
-              duration="1 hour"
-              headerColor="#fb7e6e"
-            />
+            <Link href="/html-fundamentals">
+              <KernedCard
+                title="The Fundamentals of HTML"
+                description="Every site you use is built with HTML! With this course, you'll be able to understand simple HTML syntax."
+                progress={{ current: 0, total: 10 }}
+                difficulty="Beginner"
+                duration="1 hour"
+                headerColor="#fb7e6e"
+              />
+            </Link>
           </div>
           <div className={styles.cardWrapper}>
-            <KernedCard
-              title="The Fundamentals of CSS"
-              description="Learn the basics of CSS to style your web pages."
-              progress={{ current: 0, total: 10 }}
-              difficulty="Beginner"
-              duration="1 hour"
-              headerColor="#5b64c2"
-            />
+            <Link href="/css-fundamentals">
+              <KernedCard
+                title="The Fundamentals of CSS"
+                description="Learn the basics of CSS to style your web pages."
+                progress={{ current: 0, total: 10 }}
+                difficulty="Beginner"
+                duration="1 hour"
+                headerColor="#5b64c2"
+              />
+            </Link>
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }
