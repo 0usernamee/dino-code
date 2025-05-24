@@ -18,7 +18,11 @@ export default function HomePage() {
           <div className={styles.profileGroup}>
             {/* Profile image links to profile page */}
             <Link href="/profile">
-              <img src="/Profilepic.png" alt="Profile" style={{ cursor: 'pointer' }} />
+              <img
+                src="/Profilepic.png"
+                alt="Profile"
+                style={{ cursor: "pointer" }}
+              />
             </Link>
             <div className={styles.expBadge}>28 EXP</div>
           </div>
@@ -44,7 +48,9 @@ export default function HomePage() {
                 strokeLinecap="round"
               />
             </svg>
-            <span className={styles.searchPlaceholder}>Find your lesson...</span>
+            <span className={styles.searchPlaceholder}>
+              Find your lesson...
+            </span>
           </div>
         </div>
         {/* Challenge Carousel */}
@@ -53,33 +59,36 @@ export default function HomePage() {
         </div>
         {/* In Progress Section */}
         <div className={styles.progressSection}>
-          <h2 className={styles.progressTitle}>In Progress</h2>
-          <div className={styles.progressCard}>
-            <div className={styles.progressCardTitle}>
-              JavaScript Fundamentals
+          <div className={styles.progressHeader}></div>
+          <div className={styles.progressContent}>
+            <h2 className={styles.progressTitle}>In Progress</h2>
+            <div className={styles.progressCard}>
+              <div className={styles.progressCardTitle}>
+                JavaScript Fundamentals
+              </div>
+              <div className={styles.progressRow}>
+                <span className={styles.progressNumber}>4/6</span>
+                <span className={styles.progressLessons}>Lessons</span>
+              </div>
+              <div className={styles.progressBarBg}>
+                <div
+                  className={styles.progressBarFill}
+                  style={{ width: "66%" }}
+                ></div>
+              </div>
             </div>
-            <div className={styles.progressRow}>
-              <span className={styles.progressNumber}>4/6</span>
-              <span className={styles.progressLessons}>Lessons</span>
-            </div>
-            <div className={styles.progressBarBg}>
-              <div
-                className={styles.progressBarFill}
-                style={{ width: "66%" }}
-              ></div>
-            </div>
-          </div>
-          <div className={styles.progressCard}>
-            <div className={styles.progressCardTitle}>HTML</div>
-            <div className={styles.progressRow}>
-              <span className={styles.progressNumber}>4/6</span>
-              <span className={styles.progressLessons}>Lessons</span>
-            </div>
-            <div className={styles.progressBarBg}>
-              <div
-                className={styles.progressBarFill}
-                style={{ width: "66%" }}
-              ></div>
+            <div className={styles.progressCard}>
+              <div className={styles.progressCardTitle}>HTML</div>
+              <div className={styles.progressRow}>
+                <span className={styles.progressNumber}>4/6</span>
+                <span className={styles.progressLessons}>Lessons</span>
+              </div>
+              <div className={styles.progressBarBg}>
+                <div
+                  className={styles.progressBarFill}
+                  style={{ width: "66%" }}
+                ></div>
+              </div>
             </div>
           </div>
         </div>
