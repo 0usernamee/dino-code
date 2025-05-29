@@ -5,6 +5,11 @@
   margin-right: auto;
 }
 
+.cardContainer:hover {
+  transform: scale(1.04);
+
+}
+
 .clickable {
   cursor: pointer;
 }

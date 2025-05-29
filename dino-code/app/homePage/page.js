@@ -95,8 +95,10 @@ export default function HomePage() {
         </div>
         {/* See all lessons */}
         <div className={styles.lessonsHeader}>
+          <a href="/lessons">
           <span className={styles.lessonsTitle}>See all lessons</span>
           <span className={styles.lessonsArrow}>→</span>
+          </a>
         </div>
         {/* Lesson Cards Slider */}
         <div className={styles.cardsRow}>

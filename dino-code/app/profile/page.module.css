@@ -1,12 +1,12 @@
 .profileBg {
   min-height: 100vh;
   background: #f2fff7;
-  padding-bottom: 32px;
 }
 .content {
   padding-top: 80px;
   width: 100%;
   background-image: url('/waveC.png');
+  scale: 150%;
   background-position: center top;
   background-repeat: no-repeat;
   background-size: 393px auto;
@@ -48,6 +48,11 @@
   padding: 1.2rem 1.2rem 1.5rem 1.2rem;
   margin: 0 auto 1.5rem auto;
   max-width: 393px;
+}
+
+.footerContainer {
+
+  padding-top: 32px;
 }
 
 .sectionTitle {

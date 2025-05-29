@@ -35,7 +35,6 @@ export default function Footer({ theme = "default" }) {
                   className={styles.dino}
                 />
               </div>
-              <span className={styles.logoText}>DinoCode</span>
             </div>
           </Link>
         </div>
@@ -144,7 +143,7 @@ export default function Footer({ theme = "default" }) {
 
         {/* Copyright */}
         <div className={styles.copyright}>
-          All Rights Reserved(2025~. ©Dinocode.ca
+          All Rights Reserved(2025). ©Dinocode.ca
         </div>
       </div>
     </footer>

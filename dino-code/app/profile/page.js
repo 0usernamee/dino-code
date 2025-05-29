@@ -33,7 +33,9 @@ export default function ProfilePage() {
           Current Streak
         </div>
         <ChallengeCarousel />
-        <Footer />
+      </div>
+      <div className={styles.footerContainer}>
+      <Footer />
       </div>
     </div>
   );

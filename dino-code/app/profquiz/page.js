@@ -24,14 +24,14 @@ export default function AgePage() {
             <div className="flex flex-col gap-8 w-full max-w-sm mx-auto">
               <button 
                 onClick={handleClick}
-                className="w-full bg-black text-white py-4 px-6 rounded-lg font-medium hover:bg-gray-800 transition-colors"
+                className="w-full bg-black text-white py-4 px-6 rounded-lg font-medium hover:bg-gray-500 transition-colors"
               >
                 Yes, take me there
               </button>
               
               <button 
                 onClick={handleClick}
-                className="w-full bg-black text-white py-4 px-6 rounded-lg font-medium hover:bg-gray-800 transition-colors"
+                className="w-full bg-black text-white py-4 px-6 rounded-lg font-medium hover:bg-gray-500 transition-colors"
               >
                 No, I know my level
               </button>

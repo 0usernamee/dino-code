@@ -60,7 +60,7 @@ export default function SlideOutMenu({ isOpen, onClose, theme = "default" }) {
             </Link>
           </div>
           <div className={styles.menuItem}>
-            <Link href="/quizzes" className={styles.menuLink}>
+            <Link href="/html-fundamentals" className={styles.menuLink}>
               <span>Quizzes</span>
               <span className={styles.arrow}>›</span>
             </Link>
