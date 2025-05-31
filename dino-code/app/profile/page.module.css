@@ -4,9 +4,7 @@
 }
 .content {
   padding-top: 80px;
-  width: 100%;
   background-image: url('/waveC.png');
-  scale: 150%;
   background-position: center top;
   background-repeat: no-repeat;
   background-size: 393px auto;
